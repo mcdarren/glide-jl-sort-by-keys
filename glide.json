@@ -17,7 +17,17 @@
       },
       {
         "name": "delimiter",
-        "displayName": "String delimiter",
+        "displayName": "String delimiter (default: ,)",
+        "type": "string"
+      },
+      {
+        "name": "type",
+        "displayName": "Sort Type (numerical, lexical. Default: numerical)",
+        "type": "string"
+      },
+      {
+        "name": "order",
+        "displayName": "Ordering (asc, desc. Default: desc)",
         "type": "string"
       }
      
