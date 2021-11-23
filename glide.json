@@ -21,12 +21,12 @@
         "type": "string"
       },
       {
-        "name": "type",
+        "name": "sort_type",
         "displayName": "Sort Type (numerical, lexical. Default: numerical)",
         "type": "string"
       },
       {
-        "name": "order",
+        "name": "sort_order",
         "displayName": "Ordering (asc, desc. Default: desc)",
         "type": "string"
       }
