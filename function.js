@@ -1,9 +1,9 @@
-window.function = function (data, sort_keys, delimiter, sort_type, sort_order) {
+window.function = function (data, sort_keys, delimiter, type, order) {
   if (data.value === undefined) return undefined;
   if (sort_keys.value === undefined) return undefined;
   var delim = delimiter.value ? delimiter.value : ',';
-  var sorttype = sort_type.value ? sort_type.value : 'numerical';
-  var ordering = sort_order.value ? sort_order.value : 'desc';
+  var sort_type = type.value ? type.value : 'numerical';
+  var ordering = order.value ? order.value : 'desc';
 
   var data_arr = data.value.split(delim);
   var keys_arr = sort_keys.value.split(delim);
@@ -12,7 +12,7 @@ window.function = function (data, sort_keys, delimiter, sort_type, sort_order) {
     obj[data_arr[i]] = keys_arr[i];
   }
   var sorted;
-  if (sorttype === 'lexical') {
+  if (sort_type === 'lexical') {
     sorted = Object.keys(obj).sort((a,b) => (obj[b] > obj[a]) ? 1 : ((obj[a] > obj[b]) ? -1 : 0));
   }
   else {
